@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer3.Core", "IdentityServer\IdentityServer3.Core.csproj", "{FB9E026E-BAB3-498A-A954-B93B05C146A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer3.Host.Configuration", "IdentityServer3.Host.Configuration\IdentityServer3.Host.Configuration.csproj", "{EC6C19C5-1C3B-481F-8C50-293672B7C712}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer3.Host.Console", "IdentityServer3.Host.Console\IdentityServer3.Host.Console.csproj", "{FA558FB9-FEAE-415B-B306-3342405F43B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer3.Pr.WebSite", "IdentityServer3.Pr.WebSite\IdentityServer3.Pr.WebSite.csproj", "{3B4C09E4-7A54-41A8-A027-643389F9B26B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer3.Host.Web", "IdentityServer3.Host.Web\IdentityServer3.Host.Web.csproj", "{2A99D1E3-085C-4F2C-A62D-BBC96CDE8D0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AzureWebSites|Any CPU = AzureWebSites|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB9E026E-BAB3-498A-A954-B93B05C146A5}.AzureWebSites|Any CPU.ActiveCfg = AzureWebSites|Any CPU
+		{FB9E026E-BAB3-498A-A954-B93B05C146A5}.AzureWebSites|Any CPU.Build.0 = AzureWebSites|Any CPU
+		{FB9E026E-BAB3-498A-A954-B93B05C146A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9E026E-BAB3-498A-A954-B93B05C146A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9E026E-BAB3-498A-A954-B93B05C146A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB9E026E-BAB3-498A-A954-B93B05C146A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC6C19C5-1C3B-481F-8C50-293672B7C712}.AzureWebSites|Any CPU.ActiveCfg = Release|Any CPU
+		{EC6C19C5-1C3B-481F-8C50-293672B7C712}.AzureWebSites|Any CPU.Build.0 = Release|Any CPU
+		{EC6C19C5-1C3B-481F-8C50-293672B7C712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC6C19C5-1C3B-481F-8C50-293672B7C712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC6C19C5-1C3B-481F-8C50-293672B7C712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC6C19C5-1C3B-481F-8C50-293672B7C712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA558FB9-FEAE-415B-B306-3342405F43B2}.AzureWebSites|Any CPU.ActiveCfg = Release|Any CPU
+		{FA558FB9-FEAE-415B-B306-3342405F43B2}.AzureWebSites|Any CPU.Build.0 = Release|Any CPU
+		{FA558FB9-FEAE-415B-B306-3342405F43B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA558FB9-FEAE-415B-B306-3342405F43B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA558FB9-FEAE-415B-B306-3342405F43B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA558FB9-FEAE-415B-B306-3342405F43B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B4C09E4-7A54-41A8-A027-643389F9B26B}.AzureWebSites|Any CPU.ActiveCfg = Release|Any CPU
+		{3B4C09E4-7A54-41A8-A027-643389F9B26B}.AzureWebSites|Any CPU.Build.0 = Release|Any CPU
+		{3B4C09E4-7A54-41A8-A027-643389F9B26B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B4C09E4-7A54-41A8-A027-643389F9B26B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B4C09E4-7A54-41A8-A027-643389F9B26B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B4C09E4-7A54-41A8-A027-643389F9B26B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A99D1E3-085C-4F2C-A62D-BBC96CDE8D0D}.AzureWebSites|Any CPU.ActiveCfg = Release|Any CPU
+		{2A99D1E3-085C-4F2C-A62D-BBC96CDE8D0D}.AzureWebSites|Any CPU.Build.0 = Release|Any CPU
+		{2A99D1E3-085C-4F2C-A62D-BBC96CDE8D0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A99D1E3-085C-4F2C-A62D-BBC96CDE8D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A99D1E3-085C-4F2C-A62D-BBC96CDE8D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A99D1E3-085C-4F2C-A62D-BBC96CDE8D0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
