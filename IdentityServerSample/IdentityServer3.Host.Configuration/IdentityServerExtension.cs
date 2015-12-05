@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using IdentityServer3.Core.Configuration;
 using IdentityServer3.Core.Services;
+using IdentityServer3.Core.Services.Default;
+using IdentityServer3.Core.Services.InMemory;
 using IdentityServer3.Host.Configuration.Config;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Facebook;
@@ -25,15 +27,22 @@ namespace Owin
 
             app.Map("/core", coreApp =>
             {
-                var factory = new IdentityServerServiceFactory()
-                    .UseInMemoryUsers(Users.Get())
-                    .UseInMemoryClients(Clients.Get())
-                    .UseInMemoryScopes(Scopes.Get());
+                //var factory = new IdentityServerServiceFactory()
+                //    .UseInMemoryUsers(Users.Get())
+                //    .UseInMemoryClients(Clients.Get())
+                //    .UseInMemoryScopes(Scopes.Get());
 
-                //factory.CustomGrantValidators.Add(
-                //    new Registration<ICustomGrantValidator>(typeof(CustomGrantValidator)));
-                //factory.CustomGrantValidators.Add(
-                //    new Registration<ICustomGrantValidator>(typeof(AnotherCustomGrantValidator)));
+
+
+                var factory = new IdentityServerServiceFactory();
+
+                var scopeStore = new InMemoryScopeStore(Scopes.Get());
+                factory.ScopeStore = new Registration<IScopeStore>(scopeStore);
+                var clientStore = new InMemoryClientStore(Clients.Get());
+                factory.ClientStore = new Registration<IClientStore>(clientStore);
+                factory.UseInMemoryUsers(Users.Get());
+
+                factory.CorsPolicyService = new Registration<ICorsPolicyService>(new DefaultCorsPolicyService { AllowAll = true });
 
                 factory.ConfigureClientStoreCache();
                 factory.ConfigureScopeStoreCache();
@@ -43,31 +52,12 @@ namespace Owin
                 {
                     Factory = factory,
                     SigningCertificate = Cert.Load(),
-
-                    Endpoints = new EndpointOptions
-                    {
-                        // replaced by the introspection endpoint in v2.2
-                        EnableAccessTokenValidationEndpoint = false
-                    },
+                    RequireSsl = false,
 
                     AuthenticationOptions = new AuthenticationOptions
                     {
                         IdentityProviders = ConfigureIdentityProviders,
-                        //EnablePostSignOutAutoRedirect = true
                     },
-
-                    //LoggingOptions = new LoggingOptions
-                    //{
-                    //    EnableKatanaLogging = true
-                    //},
-
-                    //EventsOptions = new EventsOptions
-                    //{
-                    //    RaiseFailureEvents = true,
-                    //    RaiseInformationEvents = true,
-                    //    RaiseSuccessEvents = true,
-                    //    RaiseErrorEvents = true
-                    //}
                 };
 
                 coreApp.UseIdentityServer(idsrvOptions);

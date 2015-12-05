@@ -27,7 +27,7 @@ namespace IdentityServer3.Host.Configuration.Config
                         new Secret("secret".Sha256())
                     },
 
-                    Flow = Flows.Hybrid,
+                    Flow = Flows.Implicit,
                     
                     AllowedScopes = new List<string>
                     {
@@ -47,26 +47,28 @@ namespace IdentityServer3.Host.Configuration.Config
                     
                     RedirectUris = new List<string>
                     {
-                        "http://localhost:8089/",
+                        "http://a.sts.com/",
                         "http://www.a.com/",
                         "http://www.b.com/",
-                        "http://localhost:2200/",
+                        "http://b.sts.com/",
                     },
 
                     PostLogoutRedirectUris = new List<string>
                     {
-                        "http://localhost:8089/",
+                        "http://a.sts.com/",
                         "http://www.a.com/",
                         "http://www.b.com/",
-                        "http://localhost:2200/",
+                        "http://b.sts.com/",
                     },
 
-                    LogoutUri = "http://localhost:2200/Home",
+                    LogoutUri = "http://www.a.com/Home",
                     LogoutSessionRequired = true
                 },
 
                 
                   #endregion
+
+               #region 其它配置
                 new Client
                 {
                     ClientName = "Code Flow Client Demo",
@@ -396,6 +398,7 @@ namespace IdentityServer3.Host.Configuration.Config
                     RefreshTokenUsage = TokenUsage.OneTimeOnly,
                     RefreshTokenExpiration = TokenExpiration.Sliding
                 }
+#endregion
             };
         }
     }
