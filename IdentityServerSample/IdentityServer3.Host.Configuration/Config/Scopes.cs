@@ -18,6 +18,7 @@ namespace IdentityServer3.Host.Configuration.Config
                     StandardScopes.Profile,
                     StandardScopes.Email,
                     StandardScopes.Address,
+                    StandardScopes.Phone,
                     StandardScopes.OfflineAccess,
                     StandardScopes.RolesAlwaysInclude,
                     StandardScopes.AllClaims,

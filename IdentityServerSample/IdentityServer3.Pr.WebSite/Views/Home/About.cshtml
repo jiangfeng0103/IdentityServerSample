@@ -4,11 +4,13 @@
 <dl>
     @foreach (var claim in System.Security.Claims.ClaimsPrincipal.Current.Claims)
     {
-        <dt>
-            @claim.Type
-        </dt>
-        <dd>
-            @claim.Value
-        </dd>
+        <div>
+            <span>
+                <strong>
+                    @claim.Type
+                </strong>
+                <a style="color: red;">@claim.Value</a>
+            </span>
+        </div>
     }
 </dl>

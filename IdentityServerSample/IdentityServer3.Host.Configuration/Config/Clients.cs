@@ -21,7 +21,7 @@ namespace IdentityServer3.Host.Configuration.Config
                 {
                     ClientName = "STS 一统",
                     Enabled = true,
-                    ClientId = "sts",
+                    ClientId = "sts",  //客户端配制的唯一Id
                     ClientSecrets = new List<Secret>
                     { 
                         new Secret("secret".Sha256())
@@ -35,6 +35,7 @@ namespace IdentityServer3.Host.Configuration.Config
                         Constants.StandardScopes.Profile,
                         Constants.StandardScopes.Email,
                         Constants.StandardScopes.Roles,
+                        Constants.StandardScopes.Phone,
                         Constants.StandardScopes.OfflineAccess,
                         "read",
                         "write"
@@ -51,6 +52,7 @@ namespace IdentityServer3.Host.Configuration.Config
                         "http://www.a.com/",
                         "http://www.b.com/",
                         "http://b.sts.com/",
+                        "http://localhost:2200/"
                     },
 
                     PostLogoutRedirectUris = new List<string>
@@ -59,6 +61,7 @@ namespace IdentityServer3.Host.Configuration.Config
                         "http://www.a.com/",
                         "http://www.b.com/",
                         "http://b.sts.com/",
+                        "http://localhost:2200/"
                     },
 
                     LogoutUri = "http://www.a.com/Home",

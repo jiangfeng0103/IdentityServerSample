@@ -19,6 +19,7 @@ namespace IdentityServer3.Host.Configuration.Config
                     Claims = new Claim[]
                     {
                         new Claim(Constants.ClaimTypes.Name, "Alice Smith"),
+                        new Claim(Constants.ClaimTypes.PhoneNumber, "1478296"),
                         new Claim(Constants.ClaimTypes.GivenName, "Alice"),
                         new Claim(Constants.ClaimTypes.FamilyName, "Smith"),
                         new Claim(Constants.ClaimTypes.Email, "AliceSmith@email.com"),
@@ -35,6 +36,7 @@ namespace IdentityServer3.Host.Configuration.Config
                         new Claim(Constants.ClaimTypes.Name, "Bob Smith"),
                         new Claim(Constants.ClaimTypes.GivenName, "Bob"),
                         new Claim(Constants.ClaimTypes.FamilyName, "Smith"),
+                        new Claim(Constants.ClaimTypes.PhoneNumber, "1478296"),
                         new Claim(Constants.ClaimTypes.Email, "BobSmith@email.com"),
                         new Claim(Constants.ClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
                         new Claim(Constants.ClaimTypes.Role, "Developer"),
