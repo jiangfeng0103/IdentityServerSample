@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="en">
+  <texts>
+    <text name="action.save" value="保存" />
+    <text name="action.cancel" value="取消" />
+    <text name="action.create" value="新增" />
+    <text name="action.edit" value="编辑" />
+    <text name="action.delete" value="删除" />
+    <text name="action.inactive" value="停用" />
+    <text name="action.active" value="启用" />
+    <text name="action.isActive" value="停用、启用" />
+    <text name="action.search" value="查询" />
+    <text name="action.reset" value="重置" />
+    <text name="action.resetPwd" value="重置密码" />
+
+
+    <text name="FormIsNotValidMessage" value="部分输入信息不符合要求，请检查并改正.." />
+    <text name="LoginFailed" value="登录失败!" />
+    <text name="InvalidUserNameOrPassword" value="用户名或密码无效" />
+    <text name="ThereIsNoTenantDefinedWithName" value="租户 {0}不存在" />
+    <text name="TenantIsNotActive" value="租户 {0} 未激活." />
+    <text name="UserIsNotActiveAndCanNotLogin" value="用户 {0} 未激活，不能登录." />
+  </texts>
+</localizationDictionary>
